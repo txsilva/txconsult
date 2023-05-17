@@ -1,0 +1,8 @@
+.barra-topo { background: #FAFAFA; height: 10px; }
+.area-menu { background: #fff; height: 150px; background-image: url(https://pdie.fiocruz.br/wp-content/themes/pdie/SVG/background-h1pdie.png); background-size: 100% 150px; background-repeat: no-repeat; }
+.logo { background: #fff; height: 100px; }
+.menu-principal { background: #7A0803 0% 0% no-repeat padding-box; height: 46px; }
+.menu-principal ul li { text-transform: capitalize; font: normal normal bold segoe-ui; font-size: 18px; letter-spacing: 1px; }
+.space { padding-top: 15px; }
+.rodape { background: #F9F9F9 0% 0% no-repeat padding-box; padding-top: 50px; padding-bottom: 50px; }
+.desenvrodape { font: roboto; font-size: 16px; color: #7a7a7a; }
