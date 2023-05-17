@@ -1,0 +1,48 @@
+// @import "assets/sass/variables-site/variables-site";
+// @import "assets/sass/mixins/mixins-master";
+
+// @import "_blocks";
+// @import "_captions";
+// @import "_galleries";
+// @import "_media";
+
+@import './_variables';
+@import "../../node_modules/bulma/sass/utilities/_all.sass";
+@import "../../node_modules/bulma/sass/base/_all";
+@import "../../node_modules/bulma/sass/elements/container";
+// @import "../../node_modules/bulma/sass/form";
+@import "../../node_modules/bulma/sass/elements/title";
+// @import "../../node_modules/bulma/sass/elements/button";
+@import "../../node_modules/bulma/sass/elements/image";
+
+
+@import "../../node_modules/bulma/sass/components/breadcrumb";
+// @import "../../node_modules/bulma/sass/components/dropdown";
+@import "../../node_modules/bulma/sass/components/level";
+@import "../../node_modules/bulma/sass/components/list";
+@import "../../node_modules/bulma/sass/components/menu";
+@import "../../node_modules/bulma/sass/components/media";
+@import "../../node_modules/bulma/sass/components/navbar";
+@import "../../node_modules/bulma/sass/components/pagination";
+@import "../../node_modules/bulma/sass/grid/columns";
+
+body {
+  background: #fff;
+}
+
+.navbar {
+  background: #EAEFF4;
+
+  .navbar-menu-main {
+    flex-grow: 1 !important;
+    justify-content: center !important;
+  }
+}
+
+.title.main {
+  @extend .has-text-centered;
+  @extend .is-size-1;
+  color: red !important;
+  font-weight: normal;
+  margin-top: 30px;
+}

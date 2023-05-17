@@ -1,0 +1,33 @@
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+  font-size: ($sizeValue * 16) * 1px;
+  font-size: $sizeValue * 1rem;
+}
+
+// Center block
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+@mixin post-section-dash {
+  &:before {
+    background: $color__text-light;
+    content: "\020";
+    display: block;
+    height: 2px;
+    margin: $size__spacing-unit 0;
+    width: 1em;
+  }
+}
+
+@mixin box-shadow( $size ) {
+  box-shadow:
+    0 0 0 $size $color__text-light inset,           // Original border.
+    0 0 0 ($size + 1px) $color__text-light inset,   // Antialiasing, inner edge.
+    0 0 1px 0 rgba( $color__text-light, 0.7 );      // Antialiasing, outer edge.
+}
+
+@import "utilities";

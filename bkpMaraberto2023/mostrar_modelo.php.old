@@ -1,0 +1,64 @@
+<?php /* Template Name: mostrar_modelo
+		 Autor: NEAD/EF
+		 */ 
+		 
+		get_header();
+?>
+<div class="container">
+
+<h1>LISTA</h1>
+<table class="table table-striped">
+      <thead>
+        <tr>
+		  <th scope="col">código</th>
+          <th scope="col">categoria</th>
+          <th scope="col">classificaçao</th>
+          <th scope="col">coordenada</th>
+          <th scope="col">nomeVia</th>
+          <th scope="col">efeitoCausa</th>
+          <th scope="col">horário</th>
+          <th scope="col">dataCadastro</th>
+        </tr>
+      </thead>
+</div>	 
+<?php 
+
+	define('DB_HOSTNAME', 'localhost');
+	define('DB_USERNAME', 'root');
+	define('DB_PASSWORD', '');
+	define('DB_DATABASE', 'maraberto');
+	define('DB_PREFIX', 'marabertlive_');
+	define('DB_CHARSET','utf8mb4');
+	
+	require_once('crud/funcoes.php');
+	
+	$link = DBConnect();
+    $select = mysqli_query($link, "SELECT * FROM marabertlive_alerta") or die(mysqli_error($link));
+
+
+//echo "<pre>";
+//print_r($select);
+
+$tam = 0;
+while ($linha = mysqli_fetch_array($select)){
+	echo "<tr>";
+	echo "<td>". $linha['codigo'] ."</td>";
+	echo "<td>". $linha['categoria'] ."</td>";
+	echo "<td>". $linha['classificacao'] ."</td>";
+	echo "<td>". $linha['coordenada'] ."</td>";
+	echo "<td>". $linha['nomeVia'] ."</td>";
+	echo "<td>". $linha['efeitoCausa'] ."</td>";
+	echo "<td>". $linha['horario'] ."</td>";
+	echo "<td>". $linha['dataCadastro'] ."</td>";
+	echo "</tr>";
+	$tam++;
+}
+echo "</table>";
+
+DBclose($link);
+echo "Quantidade de alertas: ". $tam;
+
+?>
+
+
+<?php get_footer(); ?>

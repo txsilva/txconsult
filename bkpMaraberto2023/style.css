@@ -1,0 +1,181 @@
+/*
+Theme Name: Mar Aberto
+Theme URI: https://maraberto.org
+Author: Assunção Jr / Revo Midia
+Author URI: https://revomidia.com.br/
+Description: Tema visual para o projeto Mar Aberto
+Version: 1.2
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: maraberto
+*/
+
+/* @import url('assets/css/main.min.css'); */
+
+/*! minireset.css v0.0.4 | MIT License | github.com/jgthms/minireset.css */
+html, body, p, ol, ul, li, dl, dt, dd, blockquote,
+figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0
+}
+
+
+/*
+* Alinhamentos
+*/
+.aligncenter {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.alignleft {
+  float: left;
+  margin-left: 0 !important;
+  margin-right: 20px !important;
+}
+
+.alignright {
+  float: right;
+  margin-left: 20px !important;
+  margin-right: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .alignleft, .alignright {
+    float: none !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+.aligncenter, .alignleft, .alignright {
+  display: block;
+}
+.aligncenter::after, .alignleft::after, .alignright::after {
+  content: ' ';
+  clear: both !important
+}
+
+
+#comments {
+  margin-top: 40px;
+  font-family: "Titillium Web", Sans-serif;
+  font-size: 1.1em;
+  /* letter-spacing: 2.5px; */
+}
+
+#comments::before {
+  margin-top: 120px;
+}
+
+.comment-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.comment-list li {
+    position: relative;
+    padding-bottom: 20px;
+}
+.comment-list li::after {
+  margin-top: 15px;
+  height: 1px !important;
+}
+.comment-author {
+  border-bottom: 1px solid #f5f5f5;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+.comment-author img {
+  position: relative;
+  top: 15px !important
+}
+
+.comment-meta.commentmetadata {
+  color: #c5c5c5;
+  font-size: .8rem; 
+  margin-bottom: 15px;
+}
+
+#comments cite {
+  display: inline-block !important;
+  font-weight: bold;
+  font-style: normal !important;
+}
+
+#comments .reply {
+  display: none;
+}
+
+#respond {
+  margin-top: 30px;
+  border-top: 1px dotted rgb(122,122,122);
+  padding-top: 20px;
+}
+  #respond .title {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+
+#commentform {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+#commentform input[type=submit] {
+  border-radius: 50px;
+}
+
+.button, .input, .textarea, .select select, .file-cta {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  align-items: center;
+  border: 1px solid #c5c5c5;
+  border-radius: 4px;
+  box-shadow: none;
+  display: inline-flex;
+  font-size: 1rem;
+  height: 2.25em;
+  justify-content: flex-start;
+  line-height: 1.5;
+  padding-bottom: calc(0.375em - 1px);
+  padding-left: calc(0.625em - 1px);
+  padding-right: calc(0.625em - 1px);
+  padding-top: calc(0.375em - 1px);
+  position: relative;
+  vertical-align: top;
+}
+
+.input, .textarea, .select select {
+  background-color: white;
+  border-color: #dbdbdb;
+  border-radius: 4px;
+  color: #363636;
+}
+
+.textarea {
+  height: 250px;
+}
+
+.input, .textarea  {
+  width: 100%
+}
+
+.button:focus, .input:focus, .textarea:focus, .select select:focus, .is-focused.textarea, .select select.is-focused, .is-focused.file-cta, .button:active, .input:active, .textarea:active, .is-active.button, .is-active.input, .is-active.textarea, .select select.is-active {
+  outline: none;
+}
+.elementor-textarea 
